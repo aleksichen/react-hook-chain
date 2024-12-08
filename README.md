@@ -11,7 +11,7 @@ A lightweight and flexible framework for building task execution chains in React
 
 ## **Installation**
 ```bash
-npm install bizchain
+npm install react-hook-chain
 ```
 
 ## **Basic Usage**
@@ -27,7 +27,7 @@ export interface MyContext {
 2. **Define Tasks**
 ```tsx
 // task.tsx
-import { TaskComponent } from "bizchain";
+import { TaskComponent } from "react-hook-chain";
 
 const ExampleTask: TaskComponent<MyContext> = ({ context, onResolve, onReject }) => {
   const handleContinue = () => {
@@ -56,7 +56,7 @@ Use BizChain to define a sequence of tasks.
 ```tsx
 // chain.tsx
 
-import Chain from "@aleksichen/react-hook-chain";
+import Chain from "react-hook-chain";
 import ExampleTask from "./ExampleTask";
 import { MyContext } from "./myContext";
 
@@ -73,7 +73,7 @@ Leverage useChain to execute tasks reactively in your component.
 ```tsx
 // app.tsx
 import React from "react";
-import { useChain } from "@aleksichen/react-hook-chain";
+import { useChain } from "react-hook-chain";
 import mychain from "./chain";
 import { MyContext } from "./myContext";
 

@@ -1,6 +1,10 @@
 import Chain from "./chain";
+import useChain from "./hook";
 
 export * from "./types";
-export * from "./hook";
 
 export default Chain;
+
+export {
+  useChain
+};
