@@ -25,6 +25,7 @@
     "@vitejs/plugin-react": "^4.3.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-hook-chain": "^0.0.1",
     "vite-plugin-dts": "^4.3.0"
   },
   "devDependencies": {

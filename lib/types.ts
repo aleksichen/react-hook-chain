@@ -24,3 +24,29 @@ export interface TaskItem<U> {
   taskName: string;
   taskComponent: TaskComponent<U>;
 }
+
+export interface WorkflowNode<U> {
+  nodeId: string | number;
+  nodeName: string;
+  taskComponent: TaskComponent<U>;
+}
+
+export interface WorkflowEdge<U> {
+  from: string | number;
+  to: string | number;
+  condition?: (context: U) => boolean;
+}
+
+export interface WorkflowDefinition {
+  startNodeId: string | number;
+  nodes: Array<{
+    nodeId: string | number;
+    nodeName: string;
+    componentName: string;
+  }>;
+  edges: Array<{
+    from: string | number;
+    to: string | number;
+    condition?: string;
+  }>;
+}
